@@ -63,6 +63,7 @@ public class ProviderApplication {
 
 		@GetMapping("/echo/{string}")
 		public String echo(@PathVariable String string) {
+			System.out.println("Called from the client " + string);
 			return "hello Nacos Discovery " + string;
 		}
 
